@@ -1,29 +1,29 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+<template lang="pug">
+  v-app
+    v-content
+      v-container
+        v-layout.row.wrap
+          v-flex.xs6.pa-1
+            List(text="This is a success alert!")
+          v-flex.xs6.pa-1
+            TestComponent(text="Thi is a warning alert!")
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+<script>
 
-@Component({
+import HelloWorld from './components/HelloWorld'
+import TestComponent from './components/TestComponent';
+
+export default {
+  name: 'App',
   components: {
     HelloWorld,
+    TestComponent
   },
-})
-export default class App extends Vue {}
-</script>
-
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  data () {
+    return {
+      //
+    }
+  }
 }
-</style>
+</script>
