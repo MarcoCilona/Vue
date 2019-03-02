@@ -4,7 +4,7 @@
       v-container
         v-layout.row.wrap
           v-flex.xs6.pa-1
-            List(text="This is a success alert!")
+            HelloWorld(text="This is a success alert!")
           v-flex.xs6.pa-1
             TestComponent(text="Thi is a warning alert!")
 </template>
